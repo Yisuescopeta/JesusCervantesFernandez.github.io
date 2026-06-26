@@ -1,5 +1,7 @@
 ---
 import profile from '../data/profile.js';
+const assetBase = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const portraitSrc = `${assetBase}about-portrait.png`;
 ---
 
 <section class="site-section section-frame section-frame--soft" id="sobre-mi" aria-labelledby="about-title">
@@ -8,7 +10,7 @@ import profile from '../data/profile.js';
       <div class="about__media">
         <img
           class="about__portrait"
-          src="/about-portrait.png"
+          src={portraitSrc}
           alt={`Retrato de ${profile.name}`}
           loading="lazy"
           decoding="async"
