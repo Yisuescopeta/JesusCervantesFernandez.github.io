@@ -9,7 +9,7 @@ const projects = [
       'Captura del editor Motor 2D con una escena top-down, un personaje en el centro y varios slimes distribuidos sobre un suelo de madera.',
     tags: ['Python', 'Videojuegos', 'IA', 'Motor 2D', 'Proyecto TFG'],
     repoUrl: 'https://github.com/Yisuescopeta/MotorVideojuegosIA.git',
-    landingUrl: 'https://yisuescopeta.github.io/OpenGame/#introduccion',
+    landingUrl: 'https://yisuescopeta.github.io/OpenGame',
     featured: true,
   },
   {
