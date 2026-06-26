@@ -360,6 +360,21 @@ ul {
   transform: translateY(-2px);
 }
 
+.project-card__media {
+  width: 100%;
+  margin-bottom: 1.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(56, 29, 43, 0.16);
+  background: rgba(56, 29, 43, 0.04);
+}
+
+.project-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .project-card--featured {
   padding: 2.2rem;
   background:

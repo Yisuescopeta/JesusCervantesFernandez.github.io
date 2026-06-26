@@ -1,7 +1,12 @@
 import { defineConfig } from 'astro/config';
 
+const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
+const repositoryOwner = process.env.GITHUB_REPOSITORY_OWNER?.toLowerCase() ?? '';
+const isUserSiteRepository =
+  repositoryOwner && repository.toLowerCase() === `${repositoryOwner}.github.io`;
+const base = repository && !isUserSiteRepository ? `/${repository}` : '/';
+
 export default defineConfig({
-  site: 'https://yisuescopeta.github.io',
-  // This repository is deployed as a project site under /JesusCervantesFernandez.github.io/.
-  base: '/JesusCervantesFernandez.github.io',
+  site: process.env.SITE_URL ?? 'https://yisuescopeta.github.io',
+  base,
 });

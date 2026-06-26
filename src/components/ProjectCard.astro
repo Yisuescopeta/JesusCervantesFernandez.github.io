@@ -4,6 +4,19 @@ const cardLabel = project.featured ? 'Proyecto destacado' : 'Exploración técni
 ---
 
 <article class:list={['project-card', project.featured && 'project-card--featured']}>
+  {
+    project.image && (
+      <div class="project-card__media">
+        <img
+          class="project-card__image"
+          src={project.image}
+          alt={project.imageAlt ?? `Imagen del proyecto ${project.name}`}
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+
   <div class="project-card__header">
     <p class="project-card__label">{cardLabel}</p>
     <h3>{project.name}</h3>

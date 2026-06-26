@@ -4,6 +4,9 @@ const projects = [
     context: 'TFG experimental - Python - IA',
     description:
       'Proyecto de fin de grado centrado en un motor y editor 2D experimental con integración de herramientas de inteligencia artificial para acelerar el prototipado y la construcción de videojuegos.',
+    image: '/motor-videojuegos-ia-editor.png',
+    imageAlt:
+      'Captura del editor Motor 2D con una escena top-down, un personaje en el centro y varios slimes distribuidos sobre un suelo de madera.',
     tags: ['Python', 'Videojuegos', 'IA', 'Motor 2D', 'Proyecto TFG'],
     repoUrl: 'https://github.com/Yisuescopeta/MotorVideojuegosIA.git',
     featured: true,
@@ -18,7 +21,7 @@ const projects = [
     featured: false,
   },
   {
-    name: 'FashionMarketJesusCervantesFernandez',
+    name: 'AurumAstro',
     context: 'Proyecto académico - Astro',
     description:
       'Tienda online desarrollada con Astro como proyecto de clase, orientada a trabajar estructura de ecommerce, organización de catálogo y presentación limpia de producto.',

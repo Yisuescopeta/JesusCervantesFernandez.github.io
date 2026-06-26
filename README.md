@@ -1,16 +1,16 @@
-# Portfolio de Jesús
+# Portfolio de Jesus
 
 Portfolio profesional desarrollado con Astro y preparado para publicarse en GitHub Pages.
 
-La página presenta mi perfil como desarrollador fullstack en formación, mis intereses principales y una sección de proyectos destacando el TFG `MotorVideojuegosIA`.
+La pagina presenta mi perfil como desarrollador fullstack en formacion, mis intereses principales y una seccion de proyectos destacando el TFG `MotorVideojuegosIA`.
 
-## Tecnologías
+## Tecnologias
 
 - Astro
 - HTML y CSS
 - GitHub Pages
 
-## Instalación
+## Instalacion
 
 ```bash
 npm install
@@ -22,9 +22,9 @@ npm install
 npm run dev
 ```
 
-Astro mostrará una URL local, normalmente `http://localhost:4321`.
+Astro mostrara una URL local, normalmente `http://localhost:4321`.
 
-## Build de producción
+## Build de produccion
 
 ```bash
 npm run build
@@ -42,17 +42,17 @@ npm run preview
 
 El proyecto incluye el workflow `.github/workflows/deploy.yml`, que construye y despliega el portfolio al publicar cambios en `main` o `master`.
 
-Este portfolio está configurado para desplegarse como repositorio de proyecto en GitHub Pages dentro de `Yisuescopeta/JesusCervantesFernandez.github.io`:
+Este portfolio calcula el `base` automaticamente segun el entorno de despliegue:
 
 ```js
-site: 'https://yisuescopeta.github.io',
-base: '/JesusCervantesFernandez.github.io',
+site: process.env.SITE_URL ?? 'https://yisuescopeta.github.io',
+base: repository && !isUserSiteRepository ? `/${repository}` : '/',
 ```
 
-La URL publicada esperada es:
+Comportamiento esperado:
 
-```js
-https://yisuescopeta.github.io/JesusCervantesFernandez.github.io/
-```
+- En GitHub Pages para el repositorio `Yisuescopeta/JesusCervantesFernandez.github.io`, el sitio se publica bajo `https://yisuescopeta.github.io/JesusCervantesFernandez.github.io/`.
+- En despliegues en dominio raiz, preview local o cualquier entorno sin `GITHUB_REPOSITORY`, el sitio usa `/` como base y evita la redireccion a una subruta inexistente.
+- Si necesitas fijar el dominio canonico, define `SITE_URL` en el entorno de despliegue.
 
 En GitHub, activa Pages usando GitHub Actions como fuente de despliegue.
