@@ -1,0 +1,27 @@
+---
+import profile from '../data/profile.js';
+
+const navItems = [
+  { href: '#inicio', label: 'Inicio' },
+  { href: '#portafolio', label: 'Portafolio' },
+  { href: '#sobre-mi', label: 'Sobre mí' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<header class="page-nav">
+  <div class="page-nav__inner">
+    <a class="page-nav__brand" href="#inicio" aria-label={`Volver al inicio de ${profile.name}`}>
+      <span class="page-nav__brand-name">{profile.shortName}</span>
+      <span class="page-nav__brand-meta">Portfolio</span>
+    </a>
+
+    <nav class="page-nav__links" aria-label="Navegación principal">
+      {navItems.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <p class="page-nav__note">{profile.role}</p>
+  </div>
+</header>

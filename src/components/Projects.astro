@@ -1,0 +1,32 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import projects from '../data/projects.js';
+
+const featuredProjects = projects.filter((project) => project.featured);
+const otherProjects = projects.filter((project) => !project.featured);
+---
+
+<section class="site-section section-frame" id="portafolio" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="section-heading section-heading--narrow">
+      <p class="eyebrow">Portafolio</p>
+      <h2 id="projects-title">Proyectos seleccionados que muestran dirección y aprendizaje</h2>
+      <p>
+        Una selección de trabajos que resumen mi interés por el desarrollo, la experimentación
+        técnica y la construcción de herramientas con intención.
+      </p>
+    </div>
+
+    <div class="projects-grid projects-grid--featured">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+
+    {
+      otherProjects.length > 0 && (
+        <div class="projects-grid">
+          {otherProjects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      )
+    }
+  </div>
+</section>

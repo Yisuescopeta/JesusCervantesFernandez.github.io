@@ -1,0 +1,36 @@
+---
+import profile from '../data/profile.js';
+
+const contacts = [
+  profile.contacts.email,
+  profile.contacts.linkedin,
+  profile.contacts.github,
+];
+---
+
+<section class="site-section section-frame section-frame--soft" id="contacto" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section-heading section-heading--narrow">
+      <p class="eyebrow">Contacto</p>
+      <h2 id="contact-title">Canales abiertos para conectar y seguir construyendo</h2>
+      <p>
+        Si quieres ver más trabajo, comentar una idea o abrir una conversación profesional,
+        puedes encontrarme aquí.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      {contacts.map((contact) => (
+        <a
+          class="contact-card"
+          href={contact.url}
+          target={contact.label === 'Email' ? undefined : '_blank'}
+          rel={contact.label === 'Email' ? undefined : 'noreferrer'}
+        >
+          <p class="contact-card__label">{contact.label}</p>
+          <p class="contact-card__value">{contact.value}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

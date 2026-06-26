@@ -1,0 +1,16 @@
+---
+import profile from '../data/profile.js';
+import SocialLinks from './SocialLinks.astro';
+---
+
+<section class="site-section section-frame hero-section" id="inicio" aria-labelledby="hero-title">
+  <div class="container hero">
+    <div class="hero__content">
+      <p class="eyebrow">{profile.role}</p>
+      <h1 id="hero-title" class="hero__title">{profile.name}</h1>
+      <p class="hero__summary">{profile.summary}</p>
+      <p class="hero__intro">{profile.intro}</p>
+      <SocialLinks />
+    </div>
+  </div>
+</section>

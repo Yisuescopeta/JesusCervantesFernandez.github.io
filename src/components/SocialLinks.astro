@@ -1,0 +1,48 @@
+---
+import profile from '../data/profile.js';
+
+const links = [
+  { ...profile.contacts.linkedin, key: 'linkedin' },
+  { ...profile.contacts.github, key: 'github' },
+  { ...profile.contacts.email, key: 'email' },
+];
+---
+
+<div class="social-links" aria-label="Canales de contacto principales">
+  {links.map((link) => (
+    <a
+      class="social-link"
+      href={link.url}
+      target={link.key === 'email' ? undefined : '_blank'}
+      rel={link.key === 'email' ? undefined : 'noreferrer'}
+      aria-label={link.label}
+      title={link.label}
+    >
+      {link.key === 'linkedin' && (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.94 8.5a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88Zm1.2 10.34H5.73v-8.95h2.41v8.95Zm10.13 0h-2.4v-4.36c0-1.04-.02-2.38-1.45-2.38-1.46 0-1.68 1.14-1.68 2.3v4.44H10.3v-8.95h2.31v1.22h.03c.32-.61 1.1-1.25 2.27-1.25 2.43 0 2.88 1.6 2.88 3.68v5.3Z"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+      {link.key === 'github' && (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.88a9.3 9.3 0 0 1 2.5.35c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.95-2.33 4.81-4.56 5.07.36.31.68.93.68 1.88 0 1.35-.01 2.44-.01 2.78 0 .27.18.58.69.49A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+      {link.key === 'email' && (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Zm0 1.5v.2l8 5.23 8-5.23V8H4Zm16 8v-6.03l-7.45 4.87a1 1 0 0 1-1.1 0L4 9.97V16h16Z"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+      <span class="sr-only">{link.label}</span>
+    </a>
+  ))}
+</div>

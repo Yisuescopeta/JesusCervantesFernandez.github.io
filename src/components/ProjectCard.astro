@@ -1,0 +1,22 @@
+---
+const { project } = Astro.props;
+const cardLabel = project.featured ? 'Proyecto destacado' : 'Exploración técnica';
+---
+
+<article class:list={['project-card', project.featured && 'project-card--featured']}>
+  <div class="project-card__header">
+    <p class="project-card__label">{cardLabel}</p>
+    <h3>{project.name}</h3>
+    {project.context && <p class="project-card__context">{project.context}</p>}
+  </div>
+
+  <p class="project-card__description">{project.description}</p>
+
+  <ul class="tag-list" aria-label={`Tecnologías y áreas de ${project.name}`}>
+    {project.tags.map((tag) => <li>{tag}</li>)}
+  </ul>
+
+  <a class="project-card__link" href={project.repoUrl} target="_blank" rel="noreferrer">
+    Ver repositorio
+  </a>
+</article>
