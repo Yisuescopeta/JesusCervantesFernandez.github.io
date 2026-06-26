@@ -32,8 +32,16 @@ const cardLabel = project.featured ? 'Proyecto destacado' : 'Exploración técni
       </ul>
     </div>
 
-    <a class="project-card__link" href={project.repoUrl} target="_blank" rel="noreferrer">
-      Ver repositorio
-    </a>
+    <div class="project-card__actions">
+      <a class="project-card__link" href={project.repoUrl} target="_blank" rel="noreferrer">
+        Ver repositorio
+      </a>
+
+      {project.landingUrl && (
+        <a class="project-card__link" href={project.landingUrl} target="_blank" rel="noreferrer">
+          Ver landing page
+        </a>
+      )}
+    </div>
   </div>
 </article>

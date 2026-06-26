@@ -4,8 +4,7 @@ import profile from '../data/profile.js';
 const navItems = [
   { href: '#inicio', label: 'Inicio' },
   { href: '#portafolio', label: 'Portafolio' },
-  { href: '#sobre-mi', label: 'Sobre mí' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#sobre-mi', label: 'Sobre m\u00ed' },
 ];
 ---
 
@@ -16,7 +15,7 @@ const navItems = [
       <span class="page-nav__brand-meta">Portfolio</span>
     </a>
 
-    <nav class="page-nav__links" aria-label="Navegación principal">
+    <nav class="page-nav__links" aria-label={'Navegaci\u00f3n principal'}>
       {navItems.map((item) => (
         <a href={item.href}>{item.label}</a>
       ))}

@@ -3,26 +3,38 @@ import profile from '../data/profile.js';
 ---
 
 <section class="site-section section-frame section-frame--soft" id="sobre-mi" aria-labelledby="about-title">
-  <div class="container about">
-    <div class="section-heading section-heading--narrow">
-      <p class="eyebrow">Sobre mí</p>
-      <h2 id="about-title">Un perfil que crece desde la curiosidad, la claridad y el criterio</h2>
-    </div>
-
+  <div class="container container--about about">
     <div class="about__body">
-      <div class="about__text">
-        {profile.about.map((paragraph) => (
-          <p>{paragraph}</p>
-        ))}
+      <div class="about__media">
+        <img
+          class="about__portrait"
+          src="/about-portrait.png"
+          alt={`Retrato de ${profile.name}`}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
-      <div class="about__focus" aria-label="Áreas de interés">
-        <p class="about__focus-label">Áreas de interés</p>
-        <ul>
-          {profile.interests.map((item) => (
-            <li>{item}</li>
+      <div class="about__content">
+        <div class="section-heading section-heading--narrow about__heading">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 id="about-title">Un perfil orientado al aprendizaje, la creatividad y la mejora continua</h2>
+        </div>
+
+        <div class="about__text">
+          {profile.about.map((paragraph) => (
+            <p>{paragraph}</p>
           ))}
-        </ul>
+        </div>
+
+        <div class="about__focus" aria-label="Áreas de interés">
+          <p class="about__focus-label">Áreas de interés</p>
+          <ul>
+            {profile.interests.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

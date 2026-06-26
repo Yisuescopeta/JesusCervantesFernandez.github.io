@@ -1,14 +1,13 @@
 const profile = {
   name: 'Jesús Cervantes Fernández',
   shortName: 'Jesús',
-  role: 'Desarrollador fullstack en formación',
+  role: 'Desarrollador fullstack',
   summary:
-    'Construyo proyectos web y multiplataforma con un interés especial por las interfaces claras, los videojuegos y las herramientas apoyadas por inteligencia artificial.',
-  intro:
-    'Este portfolio reúne el trabajo que mejor representa mi evolución técnica, mi criterio visual y la dirección profesional que estoy consolidando paso a paso.',
+    'Me caracterizo por mi capacidad para adaptarme a distintos tipos de proyectos y aprender nuevas tecnologías con rapidez. Soy una persona ambiciosa, exigente conmigo misma y orientada a crear proyectos con una propuesta original y bien definida.',
   about: [
-    'Me interesa diseñar y desarrollar experiencias digitales que se sientan limpias, útiles y bien pensadas. Disfruto especialmente cuando un proyecto exige combinar estructura, detalle visual y decisiones técnicas sostenibles.',
-    'Ahora mismo estoy centrado en reforzar mi base fullstack mientras exploro proyectos vinculados al desarrollo web, las aplicaciones multiplataforma, los videojuegos y la inteligencia artificial aplicada a herramientas creativas.',
+    'Me interesa diseñar y desarrollar experiencias digitales que combinen utilidad, claridad y una propuesta técnica bien pensada. Destaco por mi capacidad para adaptarme a distintos tipos de proyectos, aprender nuevas tecnologías con rapidez y aplicar ese conocimiento para construir soluciones funcionales y originales.',
+    'Actualmente estoy centrado en reforzar mi perfil fullstack mientras desarrollo proyectos relacionados con el desarrollo web, las aplicaciones multiplataforma, los videojuegos y la inteligencia artificial aplicada a herramientas creativas.',
+    'Un ejemplo de ello es OpenGame, un proyecto que refleja mi capacidad para aprender tecnologías nuevas, experimentar con ideas propias y combinar desarrollo de software, videojuegos e inteligencia artificial en una propuesta original. Este tipo de proyectos personales me permite seguir creciendo como desarrollador, evaluar mis resultados con criterio y mejorar constantemente la calidad de mi trabajo.',
   ],
   interests: [
     'Desarrollo web fullstack con base sólida en frontend',

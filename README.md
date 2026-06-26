@@ -2,7 +2,7 @@
 
 Portfolio profesional desarrollado con Astro y preparado para publicarse en GitHub Pages.
 
-La pagina presenta mi perfil como desarrollador fullstack en formacion, mis intereses principales y una seccion de proyectos destacando el TFG `MotorVideojuegosIA`.
+La pagina presenta mi perfil como desarrollador fullstack, mis intereses principales y una seccion de proyectos destacando el TFG `MotorVideojuegosIA`.
 
 ## Tecnologias
 

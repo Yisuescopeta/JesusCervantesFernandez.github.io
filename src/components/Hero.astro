@@ -5,12 +5,23 @@ import SocialLinks from './SocialLinks.astro';
 
 <section class="site-section section-frame hero-section" id="inicio" aria-labelledby="hero-title">
   <div class="container hero">
-    <div class="hero__content">
+    <div class="hero__copy">
       <p class="eyebrow">{profile.role}</p>
-      <h1 id="hero-title" class="hero__title">{profile.name}</h1>
+      <div class="hero__headline">
+        <h1 id="hero-title" class="hero__title">{profile.name}</h1>
+      </div>
       <p class="hero__summary">{profile.summary}</p>
-      <p class="hero__intro">{profile.intro}</p>
+      {profile.intro && <p class="hero__intro">{profile.intro}</p>}
       <SocialLinks />
+    </div>
+    <div class="hero__media">
+      <img
+        class="hero__portrait"
+        src="/profile-portrait.png"
+        alt={`Retrato de ${profile.name}`}
+        loading="eager"
+        decoding="async"
+      />
     </div>
   </div>
 </section>

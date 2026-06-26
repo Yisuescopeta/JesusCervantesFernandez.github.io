@@ -1,14 +1,15 @@
 const projects = [
   {
-    name: 'MotorVideojuegosIA',
+    name: 'OpenGame',
     context: 'TFG experimental - Python - IA',
     description:
-      'Proyecto de fin de grado centrado en un motor y editor 2D experimental con integración de herramientas de inteligencia artificial para acelerar el prototipado y la construcción de videojuegos.',
+      'Proyecto de fin de grado centrado en el desarrollo de un motor y editor 2D experimental con integración de herramientas de inteligencia artificial.\n\nDestaco este proyecto porque refleja mi capacidad para aprender y aplicar nuevas tecnologías, así como mi interés por crear soluciones originales que combinen desarrollo de software, videojuegos e inteligencia artificial.',
     image: '/motor-videojuegos-ia-editor.png',
     imageAlt:
       'Captura del editor Motor 2D con una escena top-down, un personaje en el centro y varios slimes distribuidos sobre un suelo de madera.',
     tags: ['Python', 'Videojuegos', 'IA', 'Motor 2D', 'Proyecto TFG'],
     repoUrl: 'https://github.com/Yisuescopeta/MotorVideojuegosIA.git',
+    landingUrl: 'https://yisuescopeta.github.io/OpenGame/#introduccion',
     featured: true,
   },
   {
