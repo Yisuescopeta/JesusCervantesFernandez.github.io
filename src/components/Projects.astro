@@ -6,25 +6,37 @@ const featuredProjects = projects.filter((project) => project.featured);
 const otherProjects = projects.filter((project) => !project.featured);
 ---
 
-<section class="site-section section-frame" id="portafolio" aria-labelledby="projects-title">
-  <div class="container">
-    <div class="section-heading section-heading--narrow">
+<section
+  class="site-section section-frame portfolio-section"
+  id="portafolio"
+  aria-labelledby="projects-title"
+>
+  <div class="container container--portfolio">
+    <div class="section-heading">
       <p class="eyebrow">Portafolio</p>
-      <h2 id="projects-title">Proyectos seleccionados que muestran dirección y aprendizaje</h2>
+      <h2 id="projects-title">Proyectos que conectan producto, aprendizaje y criterio técnico</h2>
       <p>
-        Una selección de trabajos que resumen mi interés por el desarrollo, la experimentación
-        técnica y la construcción de herramientas con intención.
+        Una selección de trabajos centrados en web, mobile y tooling para videojuegos, con foco
+        en construir piezas claras, útiles y bien resueltas.
       </p>
     </div>
 
-    <div class="projects-grid projects-grid--featured">
-      {featuredProjects.map((project) => <ProjectCard project={project} />)}
-    </div>
+    {
+      featuredProjects.length > 0 && (
+        <div class="projects-grid projects-grid--featured">
+          {featuredProjects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      )
+    }
 
     {
       otherProjects.length > 0 && (
         <div class="projects-grid">
-          {otherProjects.map((project) => <ProjectCard project={project} />)}
+          {otherProjects.map((project) => (
+            <ProjectCard project={project} />
+          ))}
         </div>
       )
     }
