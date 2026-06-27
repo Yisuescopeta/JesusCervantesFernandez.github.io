@@ -31,6 +31,11 @@ const profile = {
       value: 'jesuscerfer@gmail.com',
       url: 'mailto:jesuscerfer@gmail.com',
     },
+    cv: {
+      label: 'Ver CV',
+      value: 'CV',
+      url: `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}cv-jesus-cervantes-fernandez.pdf`,
+    },
   },
 };
 

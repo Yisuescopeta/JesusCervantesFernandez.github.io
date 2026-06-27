@@ -5,6 +5,7 @@ const links = [
   { ...profile.contacts.linkedin, key: 'linkedin' },
   { ...profile.contacts.github, key: 'github' },
   { ...profile.contacts.email, key: 'email' },
+  { ...profile.contacts.cv, key: 'cv' },
 ];
 ---
 
@@ -38,6 +39,14 @@ const links = [
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path
             d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Zm0 1.5v.2l8 5.23 8-5.23V8H4Zm16 8v-6.03l-7.45 4.87a1 1 0 0 1-1.1 0L4 9.97V16h16Z"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+      {link.key === 'cv' && (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.75 3.5h6.86c.4 0 .78.16 1.06.44l3.89 3.89c.28.28.44.66.44 1.06v11.36c0 .83-.67 1.5-1.5 1.5H6.75c-.83 0-1.5-.67-1.5-1.5V5c0-.83.67-1.5 1.5-1.5Zm6.5 1.74V8.5c0 .41.34.75.75.75h3.26L13.25 5.24ZM6.75 5v15.25H17.5v-9.5H14A2.25 2.25 0 0 1 11.75 8.5V5h-5Zm2 8.5c0-.41.34-.75.75-.75h5.5a.75.75 0 0 1 0 1.5H9.5a.75.75 0 0 1-.75-.75Zm0 3c0-.41.34-.75.75-.75h5.5a.75.75 0 0 1 0 1.5H9.5a.75.75 0 0 1-.75-.75Z"
             fill="currentColor"
           />
         </svg>
